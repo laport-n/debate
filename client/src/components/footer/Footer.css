@@ -1,0 +1,12 @@
+.FooterContainer {
+  background-color: var(--black-color);
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FooterContainer > h4 {
+  color: white;
+  text-transform: uppercase;
+}

@@ -1,0 +1,26 @@
+.DebateContainer {
+  display: grid;
+  grid-template-columns: minmax(780px, 80%) 1fr;
+  background-color: white;
+}
+
+.DisplayCamContainer {
+  padding: 5rem 0rem;
+  background-color: var(--orange-color);
+  flex: 1 1 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.CamContainer {
+  background-color: var(--black-color);
+  margin: 1rem 1rem;
+}
+
+.ChatContainer {
+  flex: 1 1 auto;
+  text-align: center;
+  padding-top: 2rem;
+}
