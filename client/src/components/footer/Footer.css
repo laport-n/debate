@@ -9,4 +9,5 @@
 .FooterContainer > h4 {
   color: white;
   text-transform: uppercase;
+  font-style: italic;
 }
