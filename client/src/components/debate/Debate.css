@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: minmax(780px, 80%) 1fr;
   background-color: white;
+  height: 80vh
 }
 
 .DisplayCamContainer {
