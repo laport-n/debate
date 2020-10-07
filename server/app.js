@@ -1,10 +1,14 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
-
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const mongoose = require('mongoose');
 
+//Get config for specific env
+const env = process.env.NODE_ENV || 'development';
+const config = require(__dirname + '/config/env_' + env + '.json');
+
+//Config routes for the api
 const topicRouter = require('./src/routes/topic');
 const userRouter = require('./src/routes/user');
 const voteRouter = require('./src/routes/vote');
@@ -12,15 +16,7 @@ const { createSchemas } = require('./src/utils/Mongoose');
 
 var app = express();
 
-//socket.io
-const server = require('http').createServer(app);
-
-/*const io = require('socket.io')(server);
-io.on('connection', socket => {
-  console.log(socket);
-});*/
-
-mongoose.connect('mongodb://localhost:27017/debate', {
+mongoose.connect(config.mongodb.uri + 'debate', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
