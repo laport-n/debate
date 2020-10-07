@@ -5,11 +5,11 @@ module.exports = class UserService {
   }
 
   async createUser(user){
+    const userDocument = this.usersModel({
+      username: user.username,
+      email: user.email
+    });
     try {
-      const userDocument = this.usersModel({
-        username: user.username,
-        email: user.email
-      });
       const user = await userDocument.save();
       return user;
     } catch (err) {
