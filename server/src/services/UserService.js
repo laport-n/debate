@@ -1,16 +1,11 @@
 module.exports = class UserService {
-  constructor(mongoose, usersModel){
+  constructor(mongoose){
     this.mongoose = mongoose;
-    this.usersModel = usersModel;
   }
 
-  async createUser(user){
-    const userDocument = this.usersModel({
-      username: user.username,
-      email: user.email
-    });
+  async createUser(userModel){
     try {
-      const user = await userDocument.save();
+      const user = await userModel.save();
       return user;
     } catch (err) {
       throw new Error(err);
