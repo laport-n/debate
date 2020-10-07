@@ -1,7 +1,7 @@
 # Debate
 A web application made to growth my skills in nodejs/react with a mongodb database.
 I'll made a front in react that permit to create topic to debate on.
-Two users can join the debate to confront themselve and other users can join to assist to the debate and talk with each other.
+Two users can join the debate to confront himself with a camera on and a mic on and other users can join to assist to the debate and talk with each other.
 The backend will be made with nodejs/express, and implement socket.io.
 
 # Server
