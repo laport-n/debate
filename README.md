@@ -13,7 +13,7 @@ The server is a nodejs application made with the express framework and linked to
   
  # Client
  The client is a react application.
- The only interaction you can do for now is a click to a loggin button that permit to show the usage of state in react.
+ The only interaction you can do for now is a click to a login button that permit to show the usage of state in react.
  # How to
  - Clone the repo
  - cd debate/client
